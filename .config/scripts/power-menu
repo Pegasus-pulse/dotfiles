@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+theme="powermenu"
+logout="  Logout"
+lock="  Lock"
+reboot="  Reboot"
+shutdown="  Shutdown"
+
+getuptime="$(uptime -p | sed -e 's/up //g')"
+uptime=$(echo "$getuptime" | awk -F', ' '
+{
+    hours = 0;
+    minutes = 0;
+    for (i = 1; i <= NF; i++) {
+        if ($i ~ /hour/) {
+            split($i, a, " ");
+            hours = a[1];
+        }
+        if ($i ~ /minute/) {
+            split($i, b, " ");
+            minutes = b[1];
+        }
+    }
+    printf "%d H %d Min", hours, minutes;
+}')
+
+options="Up: $uptime\n$logout\n$lock\n$reboot\n$shutdown"
+
+opt=$(echo -e "$options" | rofi -theme "$theme" -dmenu)
+case $opt in
+#	$logout) i3-msg exit ;;
+#	$logout) pkill -TERM -u $USER ;;
+	$logout)
+        	confirm="Are you sure you want to logout?"
+        	confirm_opt=$(echo -e "Yes\nNo" | rofi -theme "$theme" -dmenu -p "$confirm")
+		if [[ "$confirm_opt" == "Yes" ]]; then
+            		pkill -TERM -u $USER
+        	fi
+        	;;
+	$lock) betterlockscreen -l blur ;;
+	$reboot) systemctl reboot ;;
+	$shutdown) sudo shutdown -h now ;;
+	*) exit 1 ;;
+esac

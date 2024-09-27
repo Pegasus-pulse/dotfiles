@@ -1,0 +1,13 @@
+* {
+    bg0:	#071108CC;
+    bg1:	#2A2B2AF2;
+    bg2:	#4b5e5999;
+    bg3:	#228B22;
+    bg4:	#5887FF;
+    fg0:	#BDEDE0;
+    fg1:	#76918980;
+
+    main-font:		"JetBrainsMonoNerdFont 12";
+    launcher-font:	"HurmitNerdFont 12";
+}
+

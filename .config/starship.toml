@@ -1,0 +1,73 @@
+format = """
+[\u256d\u2500\ue0b6](fg:#228B22)$python$username[](fg:#228B22 bg:#1B6F1B)$directory[](fg:#1B6F1B bg:#5887FF)[](fg:#5887FF bg:#145314)$git_branch$git_status[](fg:#145314 bg:#466CCC)$c$elixir$java$nodejs$rust[](fg:#466CCC bg:#0D370D)[](fg:#0D370D)$fill$cmd_duration
+[\u2570\u2500](fg:#228B22)[ ](fg:#228B22)
+"""
+command_timeout = 5000
+add_newline = true
+
+[username]
+show_always = true
+style_user = "bg:#228B22"
+style_root = "bg:#228B22"
+#format = '[$user ]($style)'
+format = '[  ]($style)'
+
+[directory]
+style = "bg:#1B6F1B"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Repos" = " "
+"Videos" = " "
+
+[fill]
+symbol = " "
+
+[cmd_duration]
+min_time = 100
+format = "[  $duration ]($style)"
+style = "fg:#5887FF"
+
+[c]
+symbol = " "
+style = "bg:#466CCC"
+format = '[ $symbol ($version) ]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:#466CCC"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#145314"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#145314"
+format = '[$all_status$ahead_behind ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#466CCC"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#466CCC"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+style = "bg:#3B4252"
+format = '[(\($virtualenv\) )]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#466CCC"
+format = '[ $symbol ($version) ]($style)'

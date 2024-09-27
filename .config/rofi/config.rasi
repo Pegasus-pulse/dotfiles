@@ -1,0 +1,16 @@
+
+@theme "/home/pegasus-pulse/.config/rofi/themes/pegasus-rounded.rasi"
+
+configuration {
+	modi:			"window,drun,run";
+	show-icons:		false;
+	icon-theme:		"Papirus";
+	display-drun:		"Apps";
+	display-run:		"Run";
+	display-filebrowser:	"Files";
+	display-window:		"Windows";
+	drun-display-format:	"{name}";
+	hover-select:		true;
+	me-select-entry:	"MouseSecondary";
+	me-accept-entry:	"MousePrimary";
+}

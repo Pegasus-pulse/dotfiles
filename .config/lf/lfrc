@@ -1,0 +1,63 @@
+##+++==+++==+++==+++==+++==+++==+++==+++##
+##   Basic Settings			##
+##+++==+++==+++==+++==+++==+++==+++==+++##
+set previewer ~/.config/lf/lf_kitty_preview
+set cleaner ~/.config/lf/lf_kitty_clean
+
+set hidden true
+set ignorecase true
+set icons true
+set cursorpreviewfmt ""
+set period 1
+
+##+++==+++==+++==+++==+++==+++==+++==+++##
+##   Movement				##
+##+++==+++==+++==+++==+++==+++==+++==+++##
+map gc cd ~/.config
+map gd cd ~/Documents
+map gD cd ~/Downloads
+map gm cd ~/Music
+map gp cd ~/Pictures
+map gr cd ~/Repos
+map gv cd ~/Videos
+map gs cd ~/Screenshots
+
+##+++==+++==+++==+++==+++==+++==+++==+++##
+##   Custom Functions			##
+##+++==+++==+++==+++==+++==+++==+++==+++##
+cmd mkdir ${{
+	printf "Directory Name: "
+		read ans
+	mkdir $ans
+}}
+
+cmd rm ${{
+	printf "File or Directory Name to Remove: "
+	read ans
+	if [ -e "$ans" ]; then
+		rm -r "$ans"
+	fi
+}}
+
+cmd open &{{
+	case $(file --mime-type -Lb $f) in
+		text/*) lf -remote "send $id \$nvim \$fx";;
+		*) xdg-open "$f"
+	esac
+}}
+
+##+++==+++==+++==+++==+++==+++==+++==+++##
+##   Basic Functions			##
+##+++==+++==+++==+++==+++==+++==+++==+++##
+map d
+map m
+
+map R reload
+map <enter> open
+map e open
+map x cut
+map c copy
+map p : paste; clear
+map md mkdir
+map de rm
+map C clear

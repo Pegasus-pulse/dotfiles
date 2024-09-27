@@ -1,0 +1,24 @@
+#071108
+#Night
+#
+#715AFF
+#Medium slate blue
+#
+#5887FF
+#Cornflower blue
+#
+#2A2B2A
+#Jet
+#
+#228B22
+#Forest Green
+
+
+# [first-2:transparency][hexcode] only applies to 8 digit codes :)
+background = #33071108
+background-alt = #73071108
+foreground = #715AFF
+primary = #228B22
+secondary = #5887FF
+alert = #BD2C40
+disabled = #2A2B2A

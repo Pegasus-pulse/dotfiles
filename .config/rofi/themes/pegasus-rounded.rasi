@@ -1,0 +1,86 @@
+
+@import	"~/.config/rofi/themes/main.rasi"
+
+* {
+    background-color:   transparent;
+    font:		@launcher-font;
+    text-color:		@fg0;
+}
+
+window { 
+    location:		center;
+    width:		580;
+    border:		2.5px;
+    border-radius:	15px;
+    border-color:	@bg3;
+    background-color:   @bg0;
+}
+
+mainbox {
+    padding:		7px;
+}
+
+inputbar {
+    background-color:   @bg1;
+    border-radius:	14px;
+    padding:		6px 16px;
+    spacing:		6px;
+    children:		[ entry ];
+}
+
+entry {
+    placeholder:        "Search";
+    placeholder-color:  @fg1;
+}
+
+/*message {
+    margin:             12px 0 0;
+    border-radius:      16px;
+    border-color:       @bg2;
+    background-color:   @bg2;
+}*/
+
+textbox {
+    padding:		8px 24px;
+}
+
+listview {
+    background-color:   transparent;
+    margin:		12px 0 0;
+    lines:		7;
+    columns:		2;
+    fixed-height:	false;
+    padding:            8px;
+}
+
+element {
+    padding:		8px 16px;
+    spacing:		8px;
+    border-radius:	6px;
+}
+
+element normal active {
+    text-color:		@bg3;
+}
+
+element alternate active {
+    text-color:		@bg3;
+}
+
+element selected normal, element selected active {
+    background-color:   @bg2;
+    border:		2px;
+    border-color:	@bg4;
+}
+
+element-icon {
+    size:		1em;
+    vertical-align:	0.5;
+    cursor:		pointer;
+}
+
+element-text {
+    text-color:		@fg0;
+    highlight:		None;
+    cursor:		pointer;
+}

@@ -1,0 +1,49 @@
+
+@import	"~/.config/rofi/themes/main.rasi"
+
+* {
+    background-color:   transparent;
+    font:		@main-font;
+}
+
+window { 
+    location:		center;
+    width:		220px;
+    border:		2.5px;
+    border-radius:	15px;
+    border-color:	@bg3;
+    background-color:   @bg0;
+}
+
+mainbox {
+    padding:		7px;
+}
+
+inputbar {
+    enabled:		false;
+}
+
+listview {
+    lines:		5;
+    columns:		1;
+    expand:		false;
+    fixed-height:	false;
+    padding:            10px;
+}
+
+element {
+    padding:		11px 16px;
+    border-radius:	6px;
+}
+
+element selected normal {
+    background-color:   @bg2;
+    border:		2px;
+    border-color:	@bg4;
+}
+
+element-text {
+    text-color:		@fg0;
+}
+
+
