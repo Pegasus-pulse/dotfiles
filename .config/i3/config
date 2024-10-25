@@ -201,6 +201,7 @@ for_window [class="Xarchiver"] floating enable
 for_window [class="Evince"] floating enable
 for_window [class="pavucontrol"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
+for_window [class="Alarm-clock-applet"] floating enable
 
 ##+++==+++==+++==+++==+++==+++==+++==+++##
 ##   Switch Workspaces			##
@@ -483,3 +484,6 @@ exec_always --no-startup-id feh --bg-fill ~/.config/wallpapers/nature7-2.png
 
 # Polybar
 exec_always --no-startup-id ~/.config/scripts/polylaunch
+
+# Alarm clock
+#exec --no-startup-id alarm-clock-applet
