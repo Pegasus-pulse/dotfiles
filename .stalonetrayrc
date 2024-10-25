@@ -74,8 +74,7 @@ log_level err
 max_geometry 0x0
 
 # no_shrink [<bool>]         # disables shrink-back mode
-#no_shrink false
-no_shrink true
+no_shrink false
 
 # parent_bg [<bool>]         # whether to use pseudo-transparency
                              # (looks better when reparented into smth like FvwmButtons)
@@ -110,7 +109,7 @@ tint_color black
 
 # tint_level <level>         # set tinting level; level ranges from 0 (disabled)
                              # to 255
-tint_level 65
+tint_level 150
 
 # transparent [<bool>]       # whether to use root-transparency (background
                              # image must be set with Esetroot or compatible utility)
