@@ -66,6 +66,9 @@ alias ls='eza -al --header --icons --group-directories-first'
 alias ascii='ascii-image-converter'
 alias fortune='fortune | cowsay -f snowman | lolcat'
 alias myip="ip -f inet address | grep inet | grep -v 'lo$' | cut -d ' ' -f 6,13 && curl ifconfig.me && echo ' external ip'"
+alias cmus='screen -q -r -D cmus || screen -S cmus $(which cmus)'
+alias zp='7z a -t7z -mx=9'
+alias uz='7z x'
 alias x='exit'
 
 # set variable identifying the chroot you work in (used in the prompt below)
