@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 theme="powermenu"
+theme2="confirm"
 logout="  Logout"
 lock="  Lock"
 reboot="  Reboot"
@@ -31,14 +32,27 @@ case $opt in
 #	$logout) i3-msg exit ;;
 #	$logout) pkill -TERM -u $USER ;;
 	$logout)
-        	confirm="Are you sure you want to logout?"
-        	confirm_opt=$(echo -e "Yes\nNo" | rofi -theme "$theme" -dmenu -p "$confirm")
+        	confirm="Are you Sure?"
+        	confirm_opt=$(echo -e "Yes\nNo" | rofi -theme "$theme2" -dmenu -p "$confirm")
 		if [[ "$confirm_opt" == "Yes" ]]; then
             		pkill -TERM -u $USER
         	fi
         	;;
-	$lock) betterlockscreen -l blur ;;
-	$reboot) systemctl reboot ;;
-	$shutdown) sudo shutdown -h now ;;
-	*) exit 1 ;;
+	$lock) 
+		betterlockscreen -l blur
+		;;
+	$reboot)
+		confirm="Are you Sure?"
+        	confirm_opt=$(echo -e "Yes\nNo" | rofi -theme "$theme2" -dmenu -p "$confirm")
+		if [[ "$confirm_opt" == "Yes" ]]; then
+            		systemctl reboot
+        	fi
+        	;;
+	$shutdown)
+		confirm="Are you Sure?"
+        	confirm_opt=$(echo -e "Yes\nNo" | rofi -theme "$theme2" -dmenu -p "$confirm")
+		if [[ "$confirm_opt" == "Yes" ]]; then
+			sudo /sbin/shutdown -h now
+		fi
+		;;
 esac

@@ -6,6 +6,7 @@
     bg4:	#5887FF;
     fg0:	#BDEDE0;
     fg1:	#76918980;
+    tp0:	#00000000;
 
     main-font:		"JetBrainsMonoNerdFont 12";
     launcher-font:	"HurmitNerdFont 12";
