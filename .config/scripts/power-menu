@@ -29,8 +29,6 @@ options="Up: $uptime\n$logout\n$lock\n$reboot\n$shutdown"
 
 opt=$(echo -e "$options" | rofi -theme "$theme" -dmenu)
 case $opt in
-#	$logout) i3-msg exit ;;
-#	$logout) pkill -TERM -u $USER ;;
 	$logout)
         	confirm="Are you Sure?"
         	confirm_opt=$(echo -e "Yes\nNo" | rofi -theme "$theme2" -dmenu -p "$confirm")
@@ -39,7 +37,7 @@ case $opt in
         	fi
         	;;
 	$lock) 
-		betterlockscreen -l blur
+		betterlockscreen -l dimblur
 		;;
 	$reboot)
 		confirm="Are you Sure?"
