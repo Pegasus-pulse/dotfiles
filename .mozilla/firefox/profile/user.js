@@ -285,6 +285,7 @@ user_pref("layout.css.backdrop-filter.enabled", true);
 
 // PREF: Special for FirefoxGX Theme
 user_pref("firefoxgx.left-sidebar", true);
+user_pref("firefoxgx.main-image", true);
 user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
 user_pref("browser.newtabpage.activity-stream.newtabWallpapers.enabled", true);
 user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", true);
