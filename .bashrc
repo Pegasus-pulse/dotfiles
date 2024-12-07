@@ -90,7 +90,6 @@ alias fortune='fortune | cowsay -f snowman | lolcat'
 
 # Uncategorized aliases
 alias diskhealth='sudo gsmartcontrol'
-alias cmus='screen -q -r -D cmus || screen -S cmus $(which cmus)'
 alias x='exit'
 
 #######################################################################
