@@ -27,7 +27,7 @@ Here’s a rundown of the tools and applications that power my environment
 | Code Editor         | [neovim](https://github.com/neovim/neovim) </br> [VSCodium](https://github.com/VSCodium/vscodium) |
 | Image Viewer        | [qimgv](https://github.com/easymodo/qimgv)                                                      |
 | Video Player        | [mpv](https://github.com/mpv-player/mpv)                                                        |
-| Music Player        | [cmux](https://github.com/cmus/cmus)                                                            |
+| Music Player        | [mpd](https://github.com/MusicPlayerDaemon/MPD) </br> [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp) |
 | PDF Reader          | [Evince](https://apps.gnome.org/Evince/)                                                        |
 | GTK Theme           | [Qogir-Dark](https://github.com/vinceliuice/Qogir-theme)                                        |
 | Icon Theme          | [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)                         |
