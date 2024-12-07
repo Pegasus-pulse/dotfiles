@@ -1,0 +1,77 @@
+##+++System Control+++##
+
+# Restart hotkey damon
+super + shift + x
+  killandnotify "sxhkd" "Config reloaded" && sxhkd &
+
+# Lock the screen
+super + l
+  exec betterlockscreen -l dimblur
+
+# Start a terminal
+super + Return
+  exec kitty
+
+# Run Rofi app menu
+super + space
+  exec rofi -show drun -disable-history -show-icons
+
+# Powermenu(custom rofi menu)
+super + x
+  exec ~/.config/scripts/power-menu
+
+# Capture Screenshots
+Print
+  exec flameshot gui
+
+# Open VSCodium
+alt + c 
+  exec codium
+
+# Open Firefox
+alt + f 
+  exec firefox
+
+# Open Thunar
+alt + t
+  exec thunar
+
+
+###Audio###
+
+# Increase/Decrease Volume
+#alt + {minus, equal}
+#  pactl set-sink-volume @DEFAULT_SINK@ {-2%, +2%}
+
+# Mute Volume
+#alt + p
+#     pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Decrease volume
+alt + minus
+  exec ~/.config/scripts/changevolume down
+
+# Increase volume
+alt + equal
+  exec ~/.config/scripts/changevolume up
+
+# Mute Volume
+alt + p
+  exec ~/.config/scripts/changevolume mute
+
+# Media Controls
+alt + F1
+  kitty -e ncmpcpp
+
+alt + F2
+  playerctl -p "mpd" previous
+
+alt + F3
+  playerctl -p "mpd" play-pause
+
+alt + F4
+  playerctl -p "mpd" next
+
+alt +F5
+  playerctl -p "mpd" stop
+

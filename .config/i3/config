@@ -420,39 +420,8 @@ bindsym $mod+r mode "resize"
 ##   Keybindings for different actions		       ##
 ##+++==+++==+++==+++==+++==+++==+++==+++==+++==+++==+++##
 
-# start a terminal
-bindsym $mod+Return exec kitty
-
-# start rofi (program launcher)
-bindsym $mod+space exec --no-startup-id rofi -show drun -disable-history -show-icons
-
-# open VSCodium
-bindsym Mod1+c exec --no-startup-id codium
-
-# open firefox
-bindsym Mod1+f exec firefox
-
-# open thunar(GUI file manager)
-bindsym Mod1+t exec --no-startup-id thunar
-
-# Capture Screenshots
-bindsym Print exec flameshot gui
-
 # kill focused window
 bindsym $mod+q kill
-
-# Lock the Screen(betterlockscreen)
-bindsym $mod+l exec --no-startup-id betterlockscreen -l dimblur
-
-# Powermenu(custom rofi menu)
-bindsym $mod+x exec --no-startup-id ~/.config/scripts/power-menu
-
-# Decrease volume
-bindsym Mod1+minus exec --no-startup-id ~/.config/scripts/changevolume down
-# Increase volume
-bindsym Mod1+equal exec --no-startup-id ~/.config/scripts/changevolume up
-# Mute Volume
-bindsym Mod1+p exec --no-startup-id ~/.config/scripts/changevolume mute
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -476,11 +445,8 @@ exec_always --no-startup-id picom -b
 # Autotiling
 exec_always --no-startup-id autotiling
 
-# Notification Daemon
-exec --no-startup-id dunst
-
 # Desktop wallpaper
-exec_always --no-startup-id feh --bg-fill ~/.config/wallpapers/nature7-2.png
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpapers/nature7.png
 
 # Polybar
 exec_always --no-startup-id ~/.config/scripts/polylaunch

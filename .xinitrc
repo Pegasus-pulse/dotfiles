@@ -1,5 +1,6 @@
-#mpd &
-# nm-applet &
+dunst &
+mpDris2 &
+sxhkd &
+numlockx &
 
-numlockx
 exec i3
