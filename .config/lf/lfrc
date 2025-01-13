@@ -20,7 +20,8 @@ map gm cd ~/Music
 map gp cd ~/Pictures
 map gr cd ~/Repos
 map gv cd ~/Videos
-map gs cd ~/Screenshots
+map gS cd ~/Screenshots
+map gs cd ~/Sync
 
 ##+++==+++==+++==+++==+++==+++==+++==+++##
 ##   Custom Functions			##
