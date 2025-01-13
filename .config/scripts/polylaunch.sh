@@ -3,4 +3,4 @@
 polybar-msg cmd quit
 
 # Launch polybar
-polybar pulse1 2>&1 | tee -a /tmp/polybar.log & disown
+polybar -r pulse1 2>&1 | tee -a /tmp/polybar.log & disown
