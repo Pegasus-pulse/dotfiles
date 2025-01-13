@@ -77,20 +77,21 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#071108CC"
-    foreground = "#ffffffBF"
+    background = "#0e1815CC"
+    foreground = "#d5dbe0BF"
     timeout = 7
 
 [urgency_normal]
-    background = "#071108CC"
-    foreground = "#ffffffE6"
+    background = "#0e1815CC"
+    foreground = "#d5dbe0E6"
     timeout = 7
     override_pause_level = 30
     default_icon = bell
 
 [urgency_critical]
-    background = "#ED2939CC"
-    foreground = "#ffffffE6"
+    background = "#0e1815CC"
+    foreground = "#d5dbe0E6"
+    frame_color = "#a54242"
     timeout = 0
     override_pause_level = 60
     default_icon = bell
@@ -100,4 +101,7 @@
     history_ignore = yes
 [history_ignore2]
     appname = "v2raystatus"
+    history_ignore = yes
+[history_ignore3]
+    appname = "Music Player Daemon"
     history_ignore = yes
