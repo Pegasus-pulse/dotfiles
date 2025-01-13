@@ -18,7 +18,7 @@ super + space
 
 # Powermenu(custom rofi menu)
 super + x
-  exec ~/.config/scripts/power-menu
+  exec ~/.config/scripts/power-menu.sh
 
 # Capture Screenshots
 Print
@@ -49,29 +49,29 @@ alt + t
 
 # Decrease volume
 alt + minus
-  exec ~/.config/scripts/changevolume down
+  exec ~/.config/scripts/changevolume.sh down
 
 # Increase volume
 alt + equal
-  exec ~/.config/scripts/changevolume up
+  exec ~/.config/scripts/changevolume.sh up
 
 # Mute Volume
 alt + p
-  exec ~/.config/scripts/changevolume mute
+  exec ~/.config/scripts/changevolume.sh mute
 
 # Media Controls
 alt + F1
-  kitty -e ncmpcpp
-
-alt + F2
   playerctl -p "mpd" previous
-
-alt + F3
+  
+alt + F2
   playerctl -p "mpd" play-pause
 
-alt + F4
+alt + F3
   playerctl -p "mpd" next
 
+alt + F4
+  kitty -e ncmpcpp
+  
 alt +F5
   playerctl -p "mpd" stop
 
