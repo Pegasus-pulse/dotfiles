@@ -1,5 +1,5 @@
 dunst &
-mpDris2 &
+(sleep 5 && mpDris2) &
 sxhkd &
 numlockx &
 
