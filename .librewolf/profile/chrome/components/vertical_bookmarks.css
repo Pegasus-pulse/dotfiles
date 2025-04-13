@@ -1,0 +1,124 @@
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/vertical_bookmarks_toolbar.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Makes bookmarks toolbar appear vertically at the left side of the window */
+
+@-moz-document url(chrome://browser/content/browser.xhtml){
+
+  :root:not([inDOMFullscreen]){
+    --uc-vertical-toolbar-width: 40px;
+  }
+  #navigator-toolbox{ position: relative }
+  #PersonalToolbar{
+    --toolbarbutton-hover-background: transparent !important;
+    --toolbarbutton-active-background: transparent !important;
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    width: var(--uc-vertical-toolbar-width,0);
+    min-width: unset !important;
+    /* These create a empty area to the bottom of the toolbar, which is to mask a fact that we don't know exactly how high the toolbar should be */
+    height: 100vh;
+    max-height: 100vh !important; 
+    padding-bottom: 120px !important;
+    padding-inline: 2px !important;
+  }
+  #PersonalToolbar .toolbarbutton-1{
+    --toolbarbutton-inner-padding: 10px !important;
+  }
+  #PersonalToolbar #PlacesChevron{
+    display: none;
+  }
+  #PersonalToolbar > #personal-bookmarks{
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: 100vh;
+  }
+  
+  #PlacesToolbar,
+  #PlacesToolbarDropIndicatorHolder{
+    flex-direction: column;
+  }
+  
+  #PersonalToolbar #PlacesToolbarItems{
+    display: flex !important;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  #PersonalToolbar > toolbaritem{
+    justify-content: center;
+  }
+  #PersonalToolbar #PlacesToolbarItems > toolbarseparator{
+    height: 7px;
+    background-color: currentColor;
+    background-clip: padding-box;
+    border-block: 3px solid transparent !important;
+  }
+
+  #PersonalToolbar #PlacesToolbarItems > .bookmark-item{
+    padding-block: 12px !important;
+    margin-inline: 0 !important;
+  }
+  
+  #browser,
+  #browser-bottombox,
+  #main-window > body::after, /* This selector is for compatibility with tabs_below_content.css */
+  #customization-container{
+    margin-left: var(--uc-vertical-toolbar-width,0);
+  }
+  :root:is([chromehidden~="toolbar"],[sizemode="fullscreen"]) > body > #browser,
+  :root:is([chromehidden~="toolbar"],[sizemode="fullscreen"]) > body > #browser-bottombox,
+  #main-window:is([chromehidden~="toolbar"],[sizemode="fullscreen"]) > body::after,
+  :root:is([chromehidden~="toolbar"],[sizemode="fullscreen"]) > body > #customization-container{
+    margin-left: 0;
+  }
+  /* You should probably disable this if you have Firefox < 113 */
+  #PersonalToolbar #PlacesToolbarItems{
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+  }
+/*---------------------------------------------------------------------------------------------------------------------------*/
+  #personal-bookmarks .bookmark-item>.toolbarbutton-text, #PersonalToolbar #import-button label {
+    display: none !important;
+  }
+    
+  #PlacesToolbarItems > .bookmark-item > .toolbarbutton-icon[label]:not([label=""]),
+  #OtherBookmarks.bookmark-item[container] > .toolbarbutton-icon,
+  #bookmarks-toolbar-placeholder > .toolbarbutton-icon{
+    margin-inline: 0px !important;
+  }
+
+  #PlacesToolbarItems > .bookmark-item >  menupopup, #OtherBookmarks #OtherBookmarksPopup {
+    margin-inline-start: calc(var(--padding-left-tab) - 2px) !important;
+    margin-top: 3px  !important;
+  }
+
+  #PersonalToolbar>toolbarbutton>menupopup {
+    margin-right: calc(var(--padding-left-tab) - 9px) !important;
+    margin-top: 3px  !important;
+  }
+
+  #PersonalToolbar #PlacesToolbarItems>.bookmark-item .toolbarbutton-icon,
+  #PersonalToolbar #OtherBookmarks:not(bookmark-item) .toolbarbutton-icon {
+    transition: all 0.2s ease !important;
+  } 
+
+  @keyframes scalezoom{
+  0%{ transform:scale(1.2) }
+  50%{ transform:scale(0.7) }
+  100%{ transform:scale(1.0) }}
+
+  /* 'hover' icons */
+  #PersonalToolbar {
+    & .toolbarbutton-1:is(:hover):not(:active,[open])>image,
+    & #PlacesToolbarItems>.bookmark-item:is(:hover,:active):not([open])>.toolbarbutton-icon,
+    & #OtherBookmarks:not(bookmark-item):is(:hover,:active):not([open])>.toolbarbutton-icon{
+      transform: scale(1.2) !important;
+      transition-duration: 200ms !important;
+  }}
+
+}

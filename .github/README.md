@@ -22,7 +22,7 @@ Here’s a rundown of the tools and applications that power my environment
 | Promt Theme Engine  | [starship](https://github.com/starship/starship)                                                |
 | Display Manager     | [ly](https://github.com/fairyglade/ly)                                                          |
 | App Launcher        | [rofi](https://github.com/davatorium/rofi)                                                      |
-| Web Browser         | [Firefox (with BetterFox)](https://github.com/yokoffing/BetterFox)                              |
+| Web Browser         | [LibreWolf (with BetterFox)](https://github.com/yokoffing/BetterFox)                              |
 | File Manager        | [lf](https://github.com/gokcehan/lf) </br> [thunar](https://docs.xfce.org/xfce/thunar/start)    |
 | Code Editor         | [neovim](https://github.com/neovim/neovim) </br> [VSCodium](https://github.com/VSCodium/vscodium) |
 | Image Viewer        | [qimgv](https://github.com/easymodo/qimgv)                                                      |
