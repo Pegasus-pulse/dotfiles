@@ -21,9 +21,9 @@ fi
 
 if [ "$FIRST_RUN" != true ] && [ "$CURRENT_STATE" != "$PREVIOUS_STATE" ]; then
     if [ "$CURRENT_STATE" == "running" ]; then
-        dunstify -a "v2raystatus" -u low -r 9992 -i "shield-up" "V2ray connected" -t 2500
+        notify-send -a "v2raystatus" -u low -r 9992 -i "shield-up" "V2ray connected" -t 2500
     else
-        dunstify -a "v2raystatus" -u low -r 9992 -i "shield-down" "V2ray disconnected" -t 2500
+        notify-send -a "v2raystatus" -u low -r 9992 -i "shield-down" "V2ray disconnected" -t 2500
     fi
 fi
 

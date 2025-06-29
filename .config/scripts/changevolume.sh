@@ -2,12 +2,12 @@
 
 send_notification_up() {
 	volume=$(pamixer --get-volume)
-	dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i "volume-up" "${volume}%" -t 2000
+	notify-send -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i "volume-up" "${volume}%" -t 2000
 }
 
 send_notification_down() {
 	volume=$(pamixer --get-volume)
-	dunstify -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i "volume-down" "${volume}%" -t 2000
+	notify-send -a "changevolume" -u low -r 9993 -h int:value:"$volume" -i "volume-down" "${volume}%" -t 2000
 }
 
 case $1 in
