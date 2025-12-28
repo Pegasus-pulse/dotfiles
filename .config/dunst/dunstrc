@@ -5,7 +5,7 @@
 
     width = 300
     origin = bottom-right
-    offset = 3x25
+    offset = (10, 25)
     scale = 0
 
     notification_limit = 20
@@ -104,4 +104,7 @@
     history_ignore = yes
 [history_ignore3]
     appname = "Music Player Daemon"
+    history_ignore = yes
+[history_ignore4]
+    appname = "com.github.th_ch.youtube_music"
     history_ignore = yes

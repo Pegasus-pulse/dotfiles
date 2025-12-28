@@ -1,0 +1,13 @@
+[Unit]
+Description=Proxy VPN Status
+
+[Service]
+Type=simple
+ExecStart=/home/pegasus-pulse/.config/scripts/proxy_vpn_status.sh
+StandardOutput=file:/tmp/v2ray_status_output.txt
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
+

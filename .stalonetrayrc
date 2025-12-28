@@ -71,7 +71,7 @@ log_level err
 
 # max_geometry <geometry>    # maximal tray dimensions; 0 in width/height means
                              # no limit
-max_geometry 0x0
+max_geometry 1x0
 
 # no_shrink [<bool>]         # disables shrink-back mode
 no_shrink false

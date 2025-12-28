@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Proxy VPN Status Script Every 3 Seconds
+
+[Timer]
+OnActiveSec=3s
+OnUnitActiveSec=3s
+Unit=proxy_vpn_status.service
+
+[Install]
+WantedBy=default.target

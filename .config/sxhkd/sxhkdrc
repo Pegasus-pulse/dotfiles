@@ -4,9 +4,13 @@
 super + shift + x
   pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
 
+# Start v2ray(proxy)
+super + F3
+  exec ~/.config/scripts/startv2ray.sh
+
 # Lock the screen
 super + l
-  exec betterlockscreen -l dimblur
+  exec betterlockscreen -l dimblur --off 5
 
 # Start a terminal
 super + Return
@@ -19,6 +23,10 @@ super + space
 # Powermenu(custom rofi menu)
 super + x
   exec ~/.config/scripts/power-menu.sh
+
+# Clipboard
+super + v
+  /usr/bin/diodon
 
 # Capture Screenshots
 Print
@@ -49,7 +57,7 @@ alt + f
 
 # Open Brave
 alt + b
-  exec brave-browser
+  exec brave-browser --incognito
 
 # Open Thunar
 alt + t
@@ -69,7 +77,7 @@ alt + F8
 
 # Open Youtube-Music
 alt + F4
-  exec /opt/Youtube-Music/YouTube-Music-3.8.0.AppImage
+  exec /opt/Youtube-Music_pear/YouTube-Music-3.11.0.AppImage
 
 # Open task-manager
 alt + m
@@ -78,6 +86,10 @@ alt + m
 # Open terminal file-manager
 alt + l
   kitty --class "lf" -e lf
+
+# Open lazydocker
+super + F9
+  kitty --class "lazydocker" -e lazydocker
 
 
 ###Audio###

@@ -1,8 +1,7 @@
 <h1 align="center">> My / dotfiles <</h1>
 
-Welcome to my personal dotfiles repository! Here you’ll find my carefully curated configurations and scripts for a sleek Debian/sid environment. Feel free to explore, adapt, and integrate these dotfiles into your own setup. Instead of mirroring my entire configuration, I recommend cherry-picking the components that best suit your workflow.
-
-In the near future, I plan to streamline the setup process with an installation script. For now, you’ll need to piece together the components yourself, but I hope you find the individual pieces useful in creating a setup that’s uniquely yours.
+Welcome to my personal dotfiles repository!
+Feel free to explore, adapt, and integrate these dotfiles into your own setup. Instead of mirroring my entire configuration, I recommend cherry-picking the components that best suit your workflow.
 
 [Screenshots](#screenshots) are somewhere down there.
 
@@ -20,7 +19,7 @@ Here’s a rundown of the tools and applications that power my environment
 | System Info Tool    | [fastfetch](https://github.com//neofetch) </br> [btop](https:stocratos/btop)                    |
 | Terminal            | [kitty](https://github.com/kovidgoyal/kitty)                                                    |
 | Promt Theme Engine  | [starship](https://github.com/starship/starship)                                                |
-| Display Manager     | [ly](https://github.com/fairyglade/ly)                                                          |
+| Display Manager     | [greetd](https://github.com/fairyglade/ly)                                                          |
 | App Launcher        | [rofi](https://github.com/davatorium/rofi)                                                      |
 | Web Browser         | [LibreWolf (with BetterFox)](https://github.com/yokoffing/BetterFox)                              |
 | File Manager        | [lf](https://github.com/gokcehan/lf) </br> [thunar](https://docs.xfce.org/xfce/thunar/start)    |

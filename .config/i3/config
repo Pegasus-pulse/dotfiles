@@ -206,6 +206,7 @@ for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Alarm-clock-applet"] floating enable
 for_window [class="Geany"] floating enable
 for_window [class="Localsend_app"] floating enable
+for_window [class="Brave-browser"] floating enable
 
 ##+++==+++==+++==+++==+++==+++==+++==+++##
 ##   Switch Workspaces			##
@@ -270,8 +271,8 @@ for_window [class=kitty] focus
 assign [class="librewolf"] $ws2
 for_window [class=librewolf] focus
 
-assign [class="Brave-browser"] $ws2
-for_window [class=Brave-browser] focus
+#assign [class="Brave-browser"] $ws2
+#for_window [class=Brave-browser] focus
 
 
 #----[W-3:Coding]----#
@@ -289,9 +290,6 @@ for_window [class=Thunar] focus
 assign [class="Xarchiver"] $ws4
 for_window [class=Xarchiver] focus
 
-assign [class="Evince"] $ws4
-for_window [class="Evince"] focus
-
 
 #----[W-5:Gaming and Anime]----#
 assign [class="bottles"] $ws5
@@ -308,6 +306,8 @@ for_window [class=heroic] focus
 assign [class="Electron"] $ws5
 for_window [class=Electron] focus
 
+assign [class="seanime-denshi"] $ws5
+for_window [class=seanime-denshi] focus
 
 #----[W-6:Email and Messages]----#
 assign [class="Element"] $ws6
@@ -326,6 +326,12 @@ for_window [class=Gimp] focus
 
 assign [class="kdenlive"] $ws7
 for_window [class=kdenlive] focus
+
+assign [class="Rawtherapee"] $ws7
+for_window [class=Rawtherapee] focus
+
+assign [class="Godot"] $ws5
+for_window [class=Godot] focus
 
 assign [class="Virt-manager"] $ws7
 for_window [class=Virt-manager] focus
@@ -353,6 +359,8 @@ for_window [class=com.github.tchx84.Flatseal] focus
 assign [class="btop"] $ws8
 for_window [class=btop] focus
 
+assign [class="lazydocker"] $ws8
+for_window [class=lazydocker] focus
 
 #----[W-9:Music]----#
 assign [class="ncmpcpp"] $ws9
@@ -444,6 +452,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
+#bindsym $mod+Shift+minus move scratchpad
+#bindsym $mod+minus scratchpad show
+
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
@@ -451,6 +462,14 @@ tiling_drag modifier titlebar
 ##+++==+++==+++==+++==+++==+++==+++==+++==+++==+++==+++##
 ##   Autostart applications/services on login	       ##
 ##+++==+++==+++==+++==+++==+++==+++==+++==+++==+++==+++##
+# stalonetray -systemtray
+exec --no-startup-id stalonetray
+# Move stalonetray to scratchpad when it appears
+for_window [class="stalonetray"] move scratchpad
+
+# Clipboard
+exec --no-startup-id diodon
+
 # Reduce Bluelight
 exec --no-startup-id redshift
 
