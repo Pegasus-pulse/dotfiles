@@ -44,11 +44,11 @@ super + shift + {1-9}
   i3-msg move container to workspace number {1-9}
 
 alt + shift + {1,2,3,4,5,6,7,8,9}
-  i3-msg move container to workspace number {10,11,12,13,14,15,16,17,18} 
+  i3-msg move container to workspace number {10,11,12,13,14,15,16,17,18}
 
 
 # Open VSCodium
-alt + c 
+alt + c
   exec codium
 
 # Open Librewolf
@@ -77,7 +77,7 @@ alt + F8
 
 # Open Youtube-Music
 alt + F4
-  exec /opt/Youtube-Music_pear/YouTube-Music-3.11.0.AppImage
+  exec /opt/Youtube-Music_pear/YouTube-Music-*.AppImage
 
 # Open task-manager
 alt + m
@@ -91,33 +91,22 @@ alt + l
 super + F9
   kitty --class "lazydocker" -e lazydocker
 
+# Mount directories for syncing
+ctrl + alt + shift + s
+  exec ~/.config/scripts/mount-sync.sh
 
-###Audio###
+# Increase/Decrease Brightness
+alt + {Page_Up, Page_Down}
+  exec ~/.config/scripts/brightness.sh {+ 10, - 10}
 
-# Increase/Decrease Volume
-#alt + {minus, equal}
-#  pactl set-sink-volume @DEFAULT_SINK@ {-2%, +2%}
-
-# Mute Volume
-#alt + p
-#  pactl set-sink-mute @DEFAULT_SINK@ toggle
-
-# Decrease volume
-alt + minus
-  exec ~/.config/scripts/changevolume.sh down
-
-# Increase volume
-alt + equal
-  exec ~/.config/scripts/changevolume.sh up
-
-# Mute Volume
-alt + p
-  exec ~/.config/scripts/changevolume.sh mute
+# Increase/Decrease/Mute Volume
+alt + {minus, equal, p}
+  exec ~/.config/scripts/changevolume.sh {down, up, mute}
 
 # Media Controls
 alt + F1
   playerctl -a -i "mpd" previous
-  
+
 alt + F2
   playerctl -a -i "mpd" play-pause
 
@@ -126,7 +115,7 @@ alt + F3
 
 alt + F9
   playerctl -p "mpd" previous
-  
+
 alt + F10
   playerctl -p "mpd" play-pause
 
@@ -135,4 +124,3 @@ alt + F11
 
 alt + F12
   playerctl -p "mpd" stop
-
