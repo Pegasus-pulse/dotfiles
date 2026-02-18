@@ -1,0 +1,6 @@
+;; ========================================
+;; ALL EWW WIDGETS
+;; ========================================
+
+(include "./calendar/calendar.yuck")
+(include "./systray/systray.yuck")

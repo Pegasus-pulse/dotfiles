@@ -1,0 +1,35 @@
+
+.system-tray {
+  padding: 3px 3px 3px 3px;
+  min-height: 19px;
+  min-width: 19px;
+  background-color: $background;
+}
+
+.system-tray menu {
+    border-radius: 10px;
+	padding: 5px 0px;
+
+    background-color: $background;
+
+	>menuitem {
+		padding: 0px 5px;
+
+		&:disabled label {
+			color: $altblack;
+		}
+
+		&:hover {
+			background-color: $primary;
+		}
+	}
+
+	separator {
+		background-color: $altblack;
+		padding-top: 1px;
+
+		&:last-child {
+			padding: unset;
+		}
+	}
+}

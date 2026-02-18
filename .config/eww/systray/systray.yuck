@@ -1,0 +1,23 @@
+(defwidget bar-widget []
+      (box :class "system-tray"
+           :orientation "vertical"
+           :halign "center"
+           :valign "start"
+           :vexpand true
+        (systray :orientation "vertical"
+                 :icon-size 19
+                 :spacing 5)
+      )
+)
+
+(defwindow systray
+  :monitor 0
+  :geometry (geometry :x "-12px"
+                      :y "33px"
+                      :anchor "top right")
+  :stacking "fg"
+  :exclusive false
+  :focusable false
+  :windowtype "dock"
+  :wm-ignore true
+  (bar-widget))

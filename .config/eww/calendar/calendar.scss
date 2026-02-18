@@ -1,0 +1,91 @@
+/* Main container inside the window */
+.cal-box {
+  padding: 10px;
+  font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
+  background-color: $background;
+  border-radius: 0 0 6px 6px;
+}
+
+/* Custom date header */
+.cal-header-date {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: $foreground;
+}
+
+/* Calendar widget */
+.cal {
+  font-size: 1rem;
+  background-color: $background;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+    /* Header bulan & tahun */
+  > .calendar_header {
+    margin-bottom: 6px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $magenta;
+
+    button {
+      font-size: 1rem;
+      color: $magenta;
+      background: transparent;
+      border: none;
+      padding: 0px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $primary;
+        background-color: $magenta;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  /* Nama hari */
+  > .calendar_grid .calendar__day-names {
+    margin-bottom: 4px;
+    font-weight: bold;
+    color: $magenta;
+    font-size: 0.8rem;
+  }
+
+  /* Grid kalender */
+  > .calendar_grid {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  /* Tanggal individual */
+  label.calendar__day {
+    color: $magenta;
+    border-radius: 50%;
+    margin: 2px;
+    min-width: 32px;
+    min-height: 32px;
+    transition: all 0.2s ease;
+  }
+
+  /* Tanggal bulan sebelum/sesudah */
+  label.calendar__day.prev_month,
+  label.calendar__day.next_month {
+    color: $magenta;
+    opacity: 0.5;
+  }
+
+  /* Hover effect */
+  label.calendar__day:hover {
+    background-color: $magenta;
+    color: $magenta;
+  }
+}
+
+/* Today indicator */
+.cal calendar:selected {
+  background: transparent;
+  color: $primary;
+  font-weight: bold;
+}
