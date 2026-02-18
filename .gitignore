@@ -1,2 +1,11 @@
 .config/wallpapers/
 .config/cava/shaders/
+.config/ncmpcpp/error.log
+.config/scripts/email/gmail*
+.config/gtk-3.0/*
+.config/geany/*
+!.config/gtk-3.0/
+!.config/gtk-3.0/settings.ini
+!.config/geany/
+!.config/geany/colorschemes
+!.config/geany/geany.conf
