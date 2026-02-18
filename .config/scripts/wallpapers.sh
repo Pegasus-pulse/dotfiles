@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-feh --bg-fill ~/.config/wallpapers/dark/witcher.png
+feh --bg-fill ~/.config/wallpapers/dark/Skyrim.jpg

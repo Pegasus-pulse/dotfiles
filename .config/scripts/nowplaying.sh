@@ -4,7 +4,7 @@
 
 # Add player names here. Use `playerctl -l` to find the exact names.
 # The regex format allows for flexibility (e.g., '^mpd$|^YoutubeMusic$').
-ALLOWED_PLAYERS_REGEX="^(mpd|YoutubeMusic)"
+ALLOWED_PLAYERS_REGEX="^(mpd|YoutubeMusic|lowfi(\..*)?)"
 
 LAST_TITLE=""
 

@@ -6,7 +6,7 @@ super + shift + x
 
 # Start v2ray(proxy)
 super + F3
-  exec ~/.config/scripts/startv2ray.sh
+  exec ~/.config/scripts/v2ray.sh toggle
 
 # Lock the screen
 super + l

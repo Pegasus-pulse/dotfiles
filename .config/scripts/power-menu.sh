@@ -29,28 +29,28 @@ options="Up: $uptime\n$logout\n$lock\n$reboot\n$shutdown"
 
 opt=$(echo -e "$options" | rofi -theme "$theme" -dmenu)
 case $opt in
-	$logout)
-        	confirm="Are you Sure?"
-        	confirm_opt=$(echo -e "Yes\nNo" | rofi -theme "$theme2" -dmenu -p "$confirm")
-		if [[ "$confirm_opt" == "Yes" ]]; then
-            		pkill -TERM -u $USER
-        	fi
-        	;;
-	$lock) 
-		betterlockscreen -l dimblur
-		;;
-	$reboot)
-		confirm="Are you Sure?"
-        	confirm_opt=$(echo -e "Yes\nNo" | rofi -theme "$theme2" -dmenu -p "$confirm")
-		if [[ "$confirm_opt" == "Yes" ]]; then
-            		systemctl reboot
-        	fi
-        	;;
-	$shutdown)
-		confirm="Are you Sure?"
-        	confirm_opt=$(echo -e "Yes\nNo" | rofi -theme "$theme2" -dmenu -p "$confirm")
-		if [[ "$confirm_opt" == "Yes" ]]; then
-			sudo /sbin/shutdown -h now
-		fi
-		;;
+$logout)
+  confirm="Are you Sure?"
+  confirm_opt=$(echo -e "Yes\nNo" | rofi -theme "$theme2" -dmenu -p "$confirm")
+  if [[ "$confirm_opt" == "Yes" ]]; then
+    pkill -TERM -u $USER
+  fi
+  ;;
+$lock)
+  betterlockscreen -l dimblur
+  ;;
+$reboot)
+  confirm="Are you Sure?"
+  confirm_opt=$(echo -e "Yes\nNo" | rofi -theme "$theme2" -dmenu -p "$confirm")
+  if [[ "$confirm_opt" == "Yes" ]]; then
+    systemctl reboot
+  fi
+  ;;
+$shutdown)
+  confirm="Are you Sure?"
+  confirm_opt=$(echo -e "Yes\nNo" | rofi -theme "$theme2" -dmenu -p "$confirm")
+  if [[ "$confirm_opt" == "Yes" ]]; then
+    systemctl poweroff
+  fi
+  ;;
 esac
