@@ -97,14 +97,11 @@
     default_icon = bell
 
 [history_ignore]
-    appname = "changevolume"
+    appname = "task"
     history_ignore = yes
 [history_ignore2]
-    appname = "v2raystatus"
-    history_ignore = yes
-[history_ignore3]
     appname = "Music Player Daemon"
     history_ignore = yes
-[history_ignore4]
+[history_ignore3]
     appname = "com.github.th_ch.youtube_music"
     history_ignore = yes

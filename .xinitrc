@@ -3,6 +3,7 @@ dunst &
 sxhkd &
 numlockx &
 thunar --daemon &
+eww daemon &
 flameshot &
 
 exec i3

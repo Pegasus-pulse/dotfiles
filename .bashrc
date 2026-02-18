@@ -48,6 +48,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
 alias vi='nvim'
+alias rsync='rsync -avhP'
 alias search='apt search'
 alias install='sudo apt install --no-install-recommends'
 alias update='sudo apt update'
@@ -57,6 +58,7 @@ alias uplist='apt list --upgradable'
 alias remove='sudo apt autoremove'
 alias purge='sudo apt purge'
 alias cat='batcat'
+alias t='tree'
 
 # Git
 gcom() {
@@ -122,24 +124,14 @@ cd() {
   z "$@" && l
 }
 
+# Make a directory and cd into it
+mkdirc() {
+  mkdir "$@" && cd "${@: -1}"
+}
+
 # Copy file with a progress bar
 cpp() {
-  set -e
-  strace -q -ewrite cp -- "${1}" "${2}" 2>&1 |
-    awk '{
-        count += $NF
-        if (count % 10 == 0) {
-            percent = count / total_size * 100
-            printf "%3d%% [", percent
-            for (i=0;i<=percent;i++)
-                printf "="
-            printf ">"
-            for (i=percent;i<100;i++)
-                printf " "
-            printf "]\r"
-        }
-    }
-    END { print "" }' total_size="$(stat -c '%s' "${1}")" count=0
+  rsync "${1}" "${2}"
 }
 
 # Goes up a specified number of directories  (i.e. up 4)

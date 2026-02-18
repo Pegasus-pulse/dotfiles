@@ -199,14 +199,15 @@ for_window [class="Thunar"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="qimgv"] floating enable
 for_window [class="Display-im6.q16"] floating enable
-for_window [class="Xarchiver"] floating enable
-for_window [class="Evince"] floating enable
+for_window [class="Engrampa"] floating enable
+for_window [class="evince"] floating enable
 for_window [class="pavucontrol"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Alarm-clock-applet"] floating enable
 for_window [class="Geany"] floating enable
 for_window [class="Localsend_app"] floating enable
 for_window [class="Brave-browser"] floating enable
+for_window [class="com.github.johnfactotum.Foliate"] floating enable
 
 ##+++==+++==+++==+++==+++==+++==+++==+++##
 ##   Switch Workspaces			##
@@ -287,8 +288,8 @@ for_window [class=L2afpad] focus
 assign [class="Thunar"] $ws4
 for_window [class=Thunar] focus
 
-assign [class="Xarchiver"] $ws4
-for_window [class=Xarchiver] focus
+assign [class="Engrampa"] $ws4
+for_window [class=Engrampa] focus
 
 
 #----[W-5:Gaming and Anime]----#
@@ -319,6 +320,8 @@ for_window [class=TelegramDesktop] focus
 assign [class="discord"] $ws6
 for_window [class=discord] focus
 
+assign [class="obsidian"] $ws6
+for_window [class=obsidian] focus
 
 #----[W-7:Graphics]----#
 assign [class="Gimp"] $ws7
@@ -462,10 +465,13 @@ tiling_drag modifier titlebar
 ##+++==+++==+++==+++==+++==+++==+++==+++==+++==+++==+++##
 ##   Autostart applications/services on login	       ##
 ##+++==+++==+++==+++==+++==+++==+++==+++==+++==+++==+++##
+# polkit authentication agent
+exec --no-startup-id lxpolkit
+
 # stalonetray -systemtray
-exec --no-startup-id stalonetray
+#exec --no-startup-id stalonetray
 # Move stalonetray to scratchpad when it appears
-for_window [class="stalonetray"] move scratchpad
+#for_window [class="stalonetray"] move scratchpad
 
 # Clipboard
 exec --no-startup-id diodon
